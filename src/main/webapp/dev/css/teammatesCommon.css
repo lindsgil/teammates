@@ -867,15 +867,15 @@ input.inline {
 }
 
 .unsorted {
-    background: url(../images/sortSideButton.png);
+    background: url(images/sortSideButton.png);
 }
 
 .sorted-ascending {
-    background: url(../images/sortUpButton.png);
+    background: url(images/sortUpButton.png);
 }
 
 .sorted-descending {
-    background: url(../images/sortDownButton.png);
+    background: url(images/sortDownButton.png);
 }
 
 .button-sort-ascending:hover,
@@ -1243,7 +1243,7 @@ Glyphicon for success status messages
 }
 
 .ui-datepicker-header {
-    background: url(../images/dark_leather.png) repeat 0 0 #000;
+    background: url(images/dark_leather.png) repeat 0 0 #000;
     color: #e0e0e0;
     font-weight: bold;
     -webkit-box-shadow: inset 0 1px 1px 0 rgba(250, 250, 250, 2);
@@ -1268,7 +1268,7 @@ Glyphicon for success status messages
     height: 30px;
     text-align: center;
     cursor: pointer;
-    background-image: url(../images/arrow.png);
+    background-image: url(images/arrow.png);
     background-repeat: no-repeat;
     line-height: 600%;
     overflow: hidden;
