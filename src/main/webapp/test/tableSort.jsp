@@ -8,11 +8,6 @@
     <link type="text/css" href="<%= FrontEndLibrary.BOOTSTRAP_CSS %>" rel="stylesheet">
     <link type="text/css" href="<%= FrontEndLibrary.BOOTSTRAP_THEME_CSS %>" rel="stylesheet">
     <link type="text/css" href="/stylesheets/teammatesCommon.css" rel="stylesheet">
-
-    <script type="text/javascript" src="<%= FrontEndLibrary.JQUERY %>"></script>
-    <script type="text/javascript" src="<%= FrontEndLibrary.BOOTSTRAP %>"></script>
-    <script type="text/javascript" src="/test/tableSort.js"></script>
-
 </head>
 
 <body>
@@ -174,5 +169,8 @@
             <br> <br> <br>
         </div>
     </div>
+    <script type="text/javascript" src="<%= FrontEndLibrary.JQUERY %>"></script>
+    <script type="text/javascript" src="<%= FrontEndLibrary.BOOTSTRAP %>"></script>
+    <script type="text/javascript" src="/test/tableSort.js"></script>
 </body>
 </html>
