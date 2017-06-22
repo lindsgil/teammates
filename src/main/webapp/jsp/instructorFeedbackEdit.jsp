@@ -11,9 +11,6 @@
 <%@ taglib tagdir="/WEB-INF/tags/instructor/feedbackEdit" prefix="feedbackEdit" %>
 <%@ taglib tagdir="/WEB-INF/tags/instructor/feedbacks" prefix="feedbacks" %>
 
-<c:set var="cssIncludes">
-    <link rel="stylesheet" href="/stylesheets/datepicker.css" type="text/css" media="screen">
-</c:set>
 <c:set var="jsIncludes">
     <script type="text/javascript" src="<%= FrontEndLibrary.TINYMCE %>"></script>
     <script type="text/javascript" src="/js/instructorFeedbackEdit.js"></script>
@@ -22,7 +19,7 @@
 <c:set var="EMPTY_FEEDBACK_SESSION_MESSAGE">
  <%= Const.StatusMessages.FEEDBACK_QUESTION_EMPTY %>
 </c:set>
-<ti:instructorPage pageTitle="TEAMMATES - Instructor" bodyTitle="Edit Feedback Session" cssIncludes="${cssIncludes}" jsIncludes="${jsIncludes}">
+<ti:instructorPage pageTitle="TEAMMATES - Instructor" bodyTitle="Edit Feedback Session" jsIncludes="${jsIncludes}">
 
     <feedbacks:feedbackSessionsForm fsForm="${data.fsForm}" />
 

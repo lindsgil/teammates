@@ -3,13 +3,10 @@
 <%@ taglib tagdir="/WEB-INF/tags" prefix="t" %>
 <%@ taglib tagdir="/WEB-INF/tags/admin" prefix="ta" %>
 <%@ taglib tagdir="/WEB-INF/tags/admin/sessions" prefix="adminSessions" %>
-<c:set var="cssIncludes">
-    <link type="text/css" href="/stylesheets/datepicker.css" rel="stylesheet">
-</c:set>
 <c:set var="jsIncludes">
     <script type="text/javascript" src="/js/adminSessions.js"></script>
 </c:set>
-<ta:adminPage bodyTitle="Ongoing Sessions" pageTitle="TEAMMATES - Administrator Sessions" cssIncludes="${cssIncludes}" jsIncludes="${jsIncludes}">
+<ta:adminPage bodyTitle="Ongoing Sessions" pageTitle="TEAMMATES - Administrator Sessions" jsIncludes="${jsIncludes}">
     <h1>
         <small>
             Total: ${data.totalOngoingSessions} &nbsp; &nbsp;
