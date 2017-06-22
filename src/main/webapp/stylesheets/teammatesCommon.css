@@ -1199,3 +1199,21 @@ Glyphicon for success status messages
     border: thin solid grey;
     padding: 20px 40px;
 }
+
+/*//////////////////////////////////////////////////////////
+////////////////// Admin Account Details ///////////////////
+//////////////////////////////////////////////////////////*/
+
+.inputTable {
+    width: 600px;
+}
+
+.dataTable {
+    line-height: 1.5;
+}
+
+.courseCount {
+    margin: 0 auto;
+    width: 900px;
+    font-style: italic;
+}
