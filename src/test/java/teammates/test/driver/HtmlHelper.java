@@ -167,15 +167,7 @@ public final class HtmlHelper {
                 }
             }
         } else if (currentNode.getNodeName().equalsIgnoreCase("style")) {
-            NamedNodeMap attributes = currentNode.getAttributes();
-            for (int i = 0; i < attributes.getLength(); i++) {
-                Node attribute = attributes.item(i);
-                if (isTinymceStyleAttribute(attribute)) {
-                    // the style definition differs across browsers; replace with placeholder
-                    // return generateTinymceStylePlaceholder(indentation);
-                    return ignoreNode();
-                }
-            }
+            return ignoreNode();
         }
 
         return generateNodeStringRepresentation(currentNode, indentation, isPart);
@@ -192,10 +184,6 @@ public final class HtmlHelper {
     private static String generateTimeZoneSelectorPlaceholder(String indentation) {
         return indentation + "${timezone.options}" + Const.EOL;
     }
-
-    // private static String generateTinymceStylePlaceholder(String indentation) {
-    //     return indentation + "${tinymce.style}" + Const.EOL;
-    // }
 
     private static String generateNodeStringRepresentation(Node currentNode, String indentation, boolean isPart) {
         StringBuilder currentHtmlText = new StringBuilder();
@@ -237,10 +225,6 @@ public final class HtmlHelper {
         return !("html".equals(currentNodeName)
                  || "head".equals(currentNodeName)
                  || "body".equals(currentNodeName));
-    }
-
-    private static boolean isTinymceStyleAttribute(Node attribute) {
-        return checkForAttributeWithSpecificValue(attribute, "id", "mceDefaultStyles");
     }
 
     /**
@@ -438,6 +422,8 @@ public final class HtmlHelper {
                       .replace(dateOfNextHour, "${date.nexthour}")
                       // date/time now e.g [Thu, 07 May 2015, 07:52 PM] or [Thu, 07 May 2015, 07:52 PM UTC]
                       .replaceAll(dateTimeNow + REGEX_DISPLAY_TIME, "\\${datetime\\.now}")
+                      // TinyMCE CSS skin
+                      .replace(TestProperties.TEAMMATES_URL + "/js/skins/", "${test.url}/js/skins/")
                       // admin footer, test institute section
                       .replaceAll("(?s)<div( class=\"col-md-8\"| id=\"adminInstitute\"){2}>"
                                               + REGEX_ADMIN_INSTITUTE_FOOTER + "</div>",
